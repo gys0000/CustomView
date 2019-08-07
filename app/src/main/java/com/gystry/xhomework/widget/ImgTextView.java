@@ -31,6 +31,7 @@ public class ImgTextView extends View {
             "old one has a splendid future behind him: and maybe that is where the rub is.";
     private TextPaint textPaint;
     float[] mesaureWidth = new float[1];
+    Paint.FontMetrics metrics = new Paint.FontMetrics();
 
     public ImgTextView(Context context) {
         this(context, null);
@@ -53,6 +54,7 @@ public class ImgTextView extends View {
         bitmap = Utils.getAvatar(context.getResources(), R.mipmap.ic_xiaoxin);
 
         rectF = new RectF();
+        textPaint.getFontMetrics(metrics);
     }
 
     @Override
@@ -88,6 +90,8 @@ public class ImgTextView extends View {
 //        Log.e("ImgTextView", "onDraw: " + textLineCount);
 //        canvas.drawText(STR_CONTENT, 0, textLineCount, 0, textPaint.getFontSpacing(), textPaint);
 
+        Log.e("ImgTextView", "onDraw: " + metrics.ascent + ":" + metrics.descent + ":" + metrics.bottom + ":" + metrics.leading + ":" + metrics.top);
+        Log.e("ImgTextView", "onDraw: " + textPaint.getFontSpacing() );
         float yOffset = textPaint.getFontSpacing();
         for (int textCount, count = 0; count < STR_CONTENT.length(); yOffset += textPaint.getFontSpacing(), count += textCount) {
             if (yOffset > rectF.top && yOffset - textPaint.getFontSpacing() < rectF.bottom) {
