@@ -12,10 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CircleTextView viewById = (CircleTextView) findViewById(R.id.progress_circular);
-        ObjectAnimator schedule = ObjectAnimator.ofFloat(viewById, "schedule", 0.45f);
-        schedule.setDuration(1000);
-        schedule.setStartDelay(500);
-        schedule.start();
+//        CircleTextView viewById = (CircleTextView) findViewById(R.id.progress_circular);
+//        ObjectAnimator schedule = ObjectAnimator.ofFloat(viewById, "schedule", 0.45f);
+//        schedule.setDuration(1000);
+//        schedule.setStartDelay(500);
+//        schedule.start();
     }
 }
