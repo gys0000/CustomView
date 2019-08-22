@@ -1,17 +1,14 @@
 package com.gystry.xhomework;
 
 import android.animation.ObjectAnimator;
-import android.os.Build;
-import android.os.Handler;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
-import com.gystry.xhomework.widget.CircleTextView;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-//    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +30,26 @@ public class MainActivity extends AppCompatActivity {
 //        animatorSet.setStartDelay(500);
 //        animatorSet.reverse();
 //        animatorSet.start();
+//        CircleTextView viewById = (CircleTextView) findViewById(R.id.progress_circular);
+//        ObjectAnimator schedule = ObjectAnimator.ofFloat(viewById, "schedule", 0.45f);
+//        schedule.setDuration(1000);
+//        schedule.setStartDelay(500);
+//        schedule.start();
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//              while (true){
+//                  Log.e("XHOMEWORK-MainActivity", "run: 1111111111111111" );
+//              }
+//            }
+//        }).start();
+
+        HashMap map=new HashMap();
+//        map.get()
+        map.put("li","yaowen");
+        Object put = map.put("lyi", "yaowen11");
+        Log.e("MainActivity", "onCreate: "+ put);
+        int size = map.size();
+        Log.e("MainActivity", "onCreate: "+size);
     }
 }
